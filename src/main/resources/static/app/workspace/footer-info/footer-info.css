@@ -1,0 +1,14 @@
+.footer-img-circle {
+    width: 22px;
+    background: #fff;
+    position: inherit;
+    margin-top: 0px;
+    padding: 3px;
+    vertical-align: middle;
+}
+
+.footer-middle {
+    vertical-align: middle;
+    height: 20px;
+    line-height: 30px;
+}

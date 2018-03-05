@@ -1,0 +1,25 @@
+
+#web服务配置
+server:
+  port: 9900
+# session timeout in seconds
+  session-timeout:  0
+
+# bind to a specific NIC
+  address:  0.0.0.0
+
+# LOGGING
+logging:
+  path: ./logs
+
+#端点的配置
+endpoints:
+  sensitive:  true
+  shutdown:
+    enabled:  true
+
+management:
+  security:
+    roles:  SUPERUSER
+  context-path: /manage
+  port: 9500

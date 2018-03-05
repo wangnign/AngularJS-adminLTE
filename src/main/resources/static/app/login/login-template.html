@@ -1,0 +1,98 @@
+<section class="canvas-wrap">
+    <div class='login'>
+        <form name="loginForm" id="loginForm" novalidate
+              class="login_fields form-horizontal">
+            <div class='login_title'>
+                <span>后台管理系统</span>
+            </div>
+            <div class='login_fields__user'>
+                <div class='icon'>
+                    <img src='../../images/user_icon_copy.png'>
+                </div>
+                <input placeholder='用户名' type='text' name="userName" ng-model="$ctrl.user.email"
+                       ng-focus="$ctrl.onInputFocus($event);" ng-blur="$ctrl.onInputBlur($event);"
+                       ng-keyup="$ctrl.onInputKeyup($event);"/>
+                <div class='validation'>
+                    <img src='../../images/tick.png'>
+                </div>
+            </div>
+            <div class='login_fields__password'>
+                <div class='icon'>
+                    <img src='../../images/lock_icon_copy.png'>
+                </div>
+                <input placeholder='密码' type='password' name="password" ng-model="$ctrl.user.password"
+                       ng-focus="$ctrl.onInputFocus($event);" ng-blur="$ctrl.onInputBlur($event);"
+                       ng-keyup="$ctrl.onInputKeyup($event);"/>
+                <div class='validation'>
+                    <img src='../../images/tick.png'>
+                </div>
+            </div>
+            <div class='login_fields__submit'>
+                <input type='submit' value='登录' ng-click="$ctrl.doLogin($event);"/>
+                <div class='register'>
+                    <button class="btn btn-link" ng-click="$ctrl.toRegister($event);"> 注册</button>
+                </div>
+            </div>
+            <p class="disclaimer"></p>
+        </form>
+        <form name="registerForm" class="login_fields" id="registerForm">
+            <div class='register_title'>
+                <span>后台管理系统</span>
+            </div>
+            <div class='login_fields__user'>
+                <div class='icon glyphicon glyphicon-user'>
+                </div>
+                <input placeholder='用户名' type='text' name="userName" ng-focus="$ctrl.onInputFocus($event);"
+                       ng-blur="$ctrl.onInputBlur($event);" ng-keyup="$ctrl.onInputKeyup($event);"/>
+                <div class='validation'>
+                    <img src='../../images/tick.png'>
+                </div>
+            </div>
+            <div class='login_fields__user'>
+                <div class='icon glyphicon glyphicon-envelope'>
+                </div>
+                <input placeholder='Email' type='text' name="userName" ng-focus="$ctrl.onInputFocus($event);"
+                       ng-blur="$ctrl.onInputBlur($event);" ng-keyup="$ctrl.onInputKeyup($event);"/>
+                <div class='validation'>
+                    <img src='../../images/tick.png'>
+                </div>
+            </div>
+            <div class='login_fields__password'>
+                <div class='icon glyphicon glyphicon-lock'>
+                </div>
+                <input placeholder='密码' type='password' name="password" ng-focus="$ctrl.onInputFocus($event);"
+                       ng-blur="$ctrl.onInputBlur($event);" ng-keyup="$ctrl.onInputKeyup($event);"/>
+                <div class='validation'>
+                    <img src='../../images/tick.png'>
+                </div>
+            </div>
+            <div class='login_fields__password'>
+                <div class='icon glyphicon glyphicon-log-in'>
+                </div>
+                <input placeholder='确认密码' type='password' name="password" ng-focus="$ctrl.onInputFocus($event);"
+                       ng-blur="$ctrl.onInputBlur($event);" ng-keyup="$ctrl.onInputKeyup($event);"/>
+                <div class='validation'>
+                    <img src='../../images/tick.png'>
+                </div>
+            </div>
+            <div class='login_fields__submit'>
+                <input type='submit' value='注册'>
+                <div class='register'>
+                    <button class="btn btn-link" ng-click="$ctrl.toLogin($event);"> 登录</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="authent">
+        <img src="../../images/puff.svg">
+        <p>正在登录...</p>
+    </div>
+    <div id="canvas" class="gradient"></div>
+</section>
+
+
+<!-- Helpers -->
+<script src="../../scripts/login3/projector.js"></script>
+<script src="../../scripts/login3/canvas-renderer.js"></script>
+<!-- Visualitzation adjustments -->
+<script src="../../scripts/login3/3d-lines-animation.js"></script>

@@ -1,0 +1,31 @@
+spring:
+  profiles:
+    active: dev
+
+# IDENTITY (ContextIdApplicationContextInitializer)
+  application:
+    name: angularJS-adminLTE
+    inde: /
+
+# SPRING MVC (WebMvcProperties)
+# set fixed locale, e.g. en_UK
+  mvc:
+    locale: zh_CN
+    # set fixed date format, e.g. dd/MM/yyyy
+    date-format:  yyyy-MM-dd HH:mm:ss
+    favicon:
+      enabled:  true
+
+# If the the content of the "default" model should be ignored redirects
+    ignore-default-model-on-redirect: true
+
+# THYMELEAF (ThymeleafAutoConfiguration)
+  thymeleaf:
+    check-template-location:  true
+    prefix=classpath: /templates/
+
+# comma-separated list of view names that can be resolved
+    suffix: .html
+    mode: HTML5
+    encoding: UTF-8
+    cache:  false
